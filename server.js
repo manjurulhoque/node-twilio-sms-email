@@ -26,6 +26,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/webhook", (req, res) => {
+  console.log(req.body);
   res.send("Webhook setup");
 });
 

@@ -6,8 +6,7 @@ module.exports = (req, res) => {
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
     //Set from address as <number>@EMAIL_DOMAIN
-    const fromAddress =
-        req.body.From.replace('+', '') + `@${process.env.EMAIL_DOMAIN}`;
+    const fromAddress = `sms@${process.env.EMAIL_DOMAIN}`;
 
     //Create Email
     const email = {

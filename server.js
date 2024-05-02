@@ -28,7 +28,6 @@ app.get('/', (req, res) => {
 app.post('/webhook', (req, res) => {
     console.log('webhook:', req.body);
     sms2email(req, res);
-    res.send('Email sent');
 });
 
 app.listen(3000, () => console.log('App is listening on port 3000.'));
